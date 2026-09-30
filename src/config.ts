@@ -17,8 +17,5 @@ export const GROQ_REQUEST_TIMEOUT_MS = 60_000;
 /** Maximum output tokens per response. */
 export const GROQ_MAX_OUTPUT_TOKENS = 2048;
 
-/** Max characters allowed in the composer. */
-export const MAX_MESSAGE_LENGTH = 4000;
-
 /** Chat time-to-live: 24 hours in milliseconds. */
 export const CHAT_TTL_MS = 24 * 60 * 60 * 1000;

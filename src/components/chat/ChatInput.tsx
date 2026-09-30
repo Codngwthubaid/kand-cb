@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Send, Square } from "lucide-react";
-import { MAX_MESSAGE_LENGTH } from "../../config";
 import type { ResponseLength } from "../../types/chat";
 import { LENGTH_OPTIONS } from "../../utils/responseLength";
 
@@ -73,7 +72,7 @@ export function ChatInput({
 
   const submit = (): void => {
     if (!canSend) return;
-    onSend(trimmed.slice(0, MAX_MESSAGE_LENGTH));
+    onSend(trimmed);
     setValue("");
     requestAnimationFrame(() => textareaRef.current?.focus());
   };
@@ -103,12 +102,6 @@ export function ChatInput({
               </button>
             ))}
           </div>
-          <span
-            className="composer-count"
-            aria-label={`${value.length} of ${MAX_MESSAGE_LENGTH} characters used`}
-          >
-            {value.length > MAX_MESSAGE_LENGTH * 0.8 ? `${value.length}/${MAX_MESSAGE_LENGTH}` : ""}
-          </span>
         </div>
         <label htmlFor="chat-input" className="sr-only">
           Type your message. Press Enter to send, Shift plus Enter for a new line.
@@ -120,7 +113,6 @@ export function ChatInput({
           placeholder="Type your message..."
           rows={1}
           value={value}
-          maxLength={MAX_MESSAGE_LENGTH}
           disabled={disabled}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => {
