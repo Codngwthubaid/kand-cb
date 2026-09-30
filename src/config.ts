@@ -14,8 +14,5 @@ export const GROQ_CHAT_URL = "https://api.groq.com/openai/v1/chat/completions";
 /** Request timeout in milliseconds. */
 export const GROQ_REQUEST_TIMEOUT_MS = 60_000;
 
-/** Maximum output tokens per response. */
-export const GROQ_MAX_OUTPUT_TOKENS = 2048;
-
 /** Chat time-to-live: 24 hours in milliseconds. */
 export const CHAT_TTL_MS = 24 * 60 * 60 * 1000;

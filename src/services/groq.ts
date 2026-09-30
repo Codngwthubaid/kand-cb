@@ -10,7 +10,6 @@
 
 import {
   GROQ_CHAT_URL,
-  GROQ_MAX_OUTPUT_TOKENS,
   GROQ_MODEL,
   GROQ_REQUEST_TIMEOUT_MS,
 } from "../config";
@@ -218,7 +217,6 @@ export async function sendGroqMessage(
         model: GROQ_MODEL,
         messages,
         temperature: 0.7,
-        max_completion_tokens: GROQ_MAX_OUTPUT_TOKENS,
       }),
       signal: combined.signal,
     });
