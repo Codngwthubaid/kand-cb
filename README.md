@@ -1,4 +1,4 @@
-# AI Assistant — Text-only Groq Chatbot
+# Kand - CB — Text-only Groq Chatbot
 
 A production-quality, **frontend-only** text chatbot built with **React + TypeScript + Vite** and the **Groq API** (OpenAI-compatible Chat Completions). No backend, no accounts, no database. Chats persist in `localStorage` and auto-delete after **24 hours**.
 

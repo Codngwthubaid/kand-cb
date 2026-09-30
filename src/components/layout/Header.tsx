@@ -28,7 +28,7 @@ export function Header({ resolvedTheme, sidebarExpanded, onToggleTheme, onNewCha
         <span className="brand-icon" aria-hidden="true">
           <Sparkles size={18} />
         </span>
-        <h1 className="brand-title">AI Assistant</h1>
+        <h1 className="brand-title">Kand - CB</h1>
       </div>
 
       <div className="header-actions">
