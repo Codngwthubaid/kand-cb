@@ -138,6 +138,49 @@ body {
   gap: 6px;
 }
 
+/* ===== Credit marquee (below header) ===== */
+.marquee {
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  padding: 6px 0;
+  animation: marquee-scroll 18s linear infinite;
+  will-change: transform;
+}
+.marquee-chunk {
+  padding-right: 2.5rem;
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+.marquee-char {
+  display: inline-block;
+  animation: char-wave 1.6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 70ms);
+}
+.marquee-heart {
+  color: #e11d48;
+}
+.marquee-heart svg {
+  vertical-align: -2px;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+@keyframes char-wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track, .marquee-char { animation: none; }
+}
+
 /* ===== Buttons ===== */
 .btn {
   display: inline-flex;

@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { ChatContainer } from "./components/chat/ChatContainer";
 import { Header } from "./components/layout/Header";
+import { MarqueeBanner } from "./components/layout/MarqueeBanner";
 import { MobileDrawer } from "./components/layout/MobileDrawer";
 import { SettingsModal } from "./components/layout/SettingsModal";
 import { ChatSidebar } from "./components/sidebar/ChatSidebar";
@@ -82,6 +83,7 @@ export default function App() {
         onOpenSettings={() => setSettingsOpen(true)}
         onOpenMenu={handleMenu}
       />
+      <MarqueeBanner />
       <div className="app-body">
         <div className={`sidebar-desktop${sidebarCollapsed ? " hidden" : ""}`}>{sidebar}</div>
         <ChatContainer
